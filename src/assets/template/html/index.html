@@ -8,6 +8,7 @@
     <title>Главная</title>
     <!-- @if NODE_ENV='development' -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/template/vendor/slick/slick.css">
     <link rel="stylesheet" href="/assets/template/css/main.css">
     <!-- @endif -->
 </head>
@@ -81,17 +82,33 @@
             <img src="/assets/template/img/zowell/image-2.png" alt="">
             <img src="/assets/template/img/zowell/image-3.png" alt="">
             <div class="zowell__lead">
-                <div class="lead-box">
-                    <div class="lead-box__caption">
-                        ПРОДАЖА складской техники <span class="orange">ZOWELL</span>
+                <div class="lead-block">
+                    <div class="lead-box">
+                        <div class="lead-box__caption">
+                            ПРОДАЖА складской техники <span class="orange">ZOWELL</span>
+                        </div>
+                        <ul class="lead-box__items">
+                            <li>Гарантия 2 года</li>
+                            <li class="sep"></li>
+                            <li>Сервис по всей России</li>
+                            <li class="sep"></li>
+                            <li>Запчасти на складе</li>
+                        </ul>
                     </div>
-                    <ul class="lead-box__items">
-                        <li>Гарантия 2 года</li>
-                        <li class="sep"></li>
-                        <li>Сервис по всей России</li>
-                        <li class="sep"></li>
-                        <li>Запчасти на складе</li>
-                    </ul>
+                    <div class="lead-forma">
+                        <div class="lead-forma__caption">
+                            Заполните заявку и получите прайс–лист
+                        </div>
+                        <form action="">
+                            <input type="text" name="email" class="lead-forma__input">
+                            <button type="submit" class="btn">Отправить</button>
+                            <label class="lead-forma__fz152">
+                                <input class="checkbox" name="iagree" type="checkbox" checked value="Согласен">
+                                <span class="checkbox-custom"></span>
+                                <span class="label">Соглашаюсь на обработку персональных данных</span>
+                            </label>
+                        </form>
+                    </div>
                 </div>
             </div>
     </div>
@@ -99,7 +116,7 @@
 
 <section class="reliable">
     <div class="container">
-        <h2>Высокопроизводительные и надежные</h2>
+        <h2 class="header2">Высокопроизводительные и надежные</h2>
         <div class="reliable__box">
             <div class="reliable__propery">
                 <ul class="reliable__list">
@@ -127,8 +144,114 @@
     </div>
 </section>
 
+<section class="popular">
+    <div class="container">
+        <div class="popular__header">Хиты продаж</div>
+        <div class="popular__list">
+            <div class="popular__item">
+                <div class="popular__card">
+                    <a href="#" class="popular__link">
+                        <div class="popular__image-box">
+                            <div class="popular__image" style="background-image: url('/assets/template/img/tmp/popular-1.jpg')"></div>
+                            <div class="popular__overlay"></div>
+                        </div>
+                        <div class="popular__name">Название товара</div>
+                    </a>
+                </div>
+            </div>
+            <div class="popular__item">
+                <div class="popular__card">
+                    <a href="#" class="popular__link">
+                        <div class="popular__image-box">
+                            <div class="popular__image" style="background-image: url('/assets/template/img/tmp/popular-1.jpg')"></div>
+                            <div class="popular__overlay"></div>
+                        </div>
+                        <div class="popular__name">Название товара</div>
+                    </a>
+                </div>
+            </div>
+            <div class="popular__item">
+                <div class="popular__card">
+                    <a href="#" class="popular__link">
+                        <div class="popular__image-box">
+                            <div class="popular__image" style="background-image: url('/assets/template/img/tmp/popular-1.jpg')"></div>
+                            <div class="popular__overlay"></div>
+                        </div>
+                        <div class="popular__name">Название товара</div>
+                    </a>
+                </div>
+            </div>
+            <div class="popular__item">
+                <div class="popular__card">
+                    <a href="#" class="popular__link">
+                        <div class="popular__image-box">
+                            <div class="popular__image" style="background-image: url('/assets/template/img/tmp/popular-1.jpg')"></div>
+                            <div class="popular__overlay"></div>
+                        </div>
+                        <div class="popular__name">Название товара</div>
+                    </a>
+                </div>
+            </div>
+            <div class="popular__item">
+                <div class="popular__card">
+                    <a href="#" class="popular__link">
+                        <div class="popular__image-box">
+                            <div class="popular__image" style="background-image: url('/assets/template/img/tmp/popular-1.jpg')"></div>
+                            <div class="popular__overlay"></div>
+                        </div>
+                        <div class="popular__name">Название товара</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="two-product">
+    <div class="--container">
+        <div class="two-product__list">
+            <div class="two-product__item">
+                <div class="two-product__card">
+                    <div class="two-product__name">
+                        <span>Штабелер</span> ZOWELL XE 1545
+                    </div>
+                    <div class="two-product__image" style="background-image: url('/assets/template/img/tmp/two-product-1.png')">
+                        <div class="two-product__info">
+                            <div class="two-product__label">Высота подъема вил (м):</div>
+                            <div class="two-product__value">4,5</div>
+                            <div class="two-product__label">Грузоподъёмность (кг):</div>
+                            <div class="two-product__value">1200</div>
+                        </div>
+                    </div>
+                    <a href="#" class="btn-buy">Купить</a>
+                </div>
+            </div>
+            <div class="two-product__item">
+                <div class="two-product__card">
+                    <div class="two-product__name">
+                        <span>Штабелер</span> ZOWELL XE 1535
+                    </div>
+                    <div class="two-product__image" style="background-image: url('/assets/template/img/tmp/two-product-2.png')">
+                        <div class="two-product__info">
+                            <div class="two-product__label">Высота подъема вил (м):</div>
+                            <div class="two-product__value">3,5</div>
+                            <div class="two-product__label">Грузоподъёмность (кг):</div>
+                            <div class="two-product__value">1200</div>
+                        </div>
+                    </div>
+                    <a href="#" class="btn-buy">Купить</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <footer>
 
 </footer>
+
+<script src="assets/template/vendor/jquery-3.2.1.min.js"></script>
+<script src="assets/template/vendor/slick/slick.js"></script>
+<script src="assets/template/js/scripts.js"></script>
 </body>
 </html>
