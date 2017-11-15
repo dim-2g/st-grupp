@@ -66,17 +66,18 @@ body{
         color: #fff;
     }
     &__logo{
-        width: 24%;
+        //width: 24%;
         //text-align: center;
     }
     &__box{
         display: flex;
+        justify-content: space-between;
     }
     &__center{
-        width: 47%;
+        flex: 1;
     }
     &__contacts{
-        width: 29%;
+        //width: 29%;
         text-align: right;
         margin-top: 15px;
 
@@ -99,6 +100,9 @@ body{
 }
 .search{
     margin-top: 15px;
+    max-width: 515px;
+    margin-left: auto;
+    margin-right: auto;
     &__input{
         height: 38px;
         width: 100%;
@@ -211,12 +215,163 @@ body{
 }
 .lead-box{
     padding: 30px 18px;
-    background-color: rgba(243,242,240,0.5);
+    background: rgba(243,242,240,0.5) url('/assets/template/img/lead__bg.png') left top;
     box-shadow: 0 3px 18px 0 #616161;
     margin-bottom: 75px;
+    width: 620px;
+    height: 139px;
     &__caption{
-        font-size:29px;
+        font-size:27px;
+        text-align: center;
         text-transform: uppercase;
         font-weight: bold;
     }
+    &__items{
+        list-style-type: none;
+        display: flex;
+        justify-content: space-around;
+        font-size: 16px;
+        li{
+            position: relative; 
+            &.sep:before{
+                content: "";
+                height: 16px;
+                width: 1px;
+                background-color:#000;
+                display: inline-block;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translate(-50%,-50%);
+            }
+            &:first-child{
+                &:before{
+                    display: none;
+                }
+            }   
+        }
+        
+    }
 }
+
+.reliable{
+    background: transparent url('/assets/template/img/zowell/bg.jpg') center center no-repeat;
+    background-size: cover;
+    padding: 30px 0;
+    &__box{
+        display: flex;
+    }
+    &__propery{
+        flex: 1;
+    }
+    &__sample{
+        position: relative;
+        flex: 1;
+    }
+    &__image{
+        position: absolute;
+        top: -40px;
+        right: 0;
+    }
+    &__list{
+        margin: 0;
+        padding-top: 45px;
+        padding-right: 45px;
+        list-style-type: none;
+        li{
+            padding-left: 45px;
+            position: relative;
+            line-height: 110%;
+            margin-bottom: 25px;
+            &:before{
+                content: "";
+                display: inline-block;    
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+    &__1{
+        &:before{
+            @include sprite($reliable-1);
+        }
+    }
+    &__2{
+        &:before{
+            @include sprite($reliable-2);
+        }
+    }
+    &__3{
+        &:before{
+            @include sprite($reliable-3);
+        }
+    }
+    &__4{
+        &:before{
+            @include sprite($reliable-4);
+        }
+    }
+    &__5{
+        &:before{
+            @include sprite($reliable-5);
+        }
+    }
+}
+
+
+nav[role="navigation"] {
+  background-color: #f6f6f6;
+  border-bottom: 1px solid #cccccc;
+  ul {
+      list-style-type: none;
+      margin: 0;
+      height: 40px;
+      display: flex;
+    }
+
+    ul>li {
+      flex: 1 1 20%;
+      &:first-child {
+        a span {
+          &:before{
+            display: none;
+          }
+        }
+      }
+      
+    }
+    ul>li>a {
+        height: 40px;
+        display: flex;
+        align-items: center;
+        margin: auto;
+        text-decoration: none;
+        color: #000;
+        span {
+          display: flex;
+          flex: 1 1 100%;
+          justify-content: space-around;
+          line-height: 20px;
+          position: relative;
+          &:before{
+            content: "";
+            @include sprite($topmenu-dot);
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translate(-50%,-50%);
+          }
+        }
+        &:hover {
+          background: lighten($orange, 5%);
+          color: #000;
+        }
+    }
+
+}
+
+
+
