@@ -275,9 +275,8 @@ body{
     max-width: 442px;
     margin-left: auto;
     margin-right: auto;
-    form{
+    &__inputs{
         display: flex;
-        flex-wrap: wrap;
         justify-content: space-between;
     }
     &__caption{
