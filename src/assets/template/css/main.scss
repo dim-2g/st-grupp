@@ -18,6 +18,7 @@ a{
 }
 body{
     font-family: 'Roboto', sans-serif;
+    font-weight: 400;
 }
 h1,h2,h3,h4{
     font-weight: 500;
@@ -119,6 +120,7 @@ h1,h2,h3,h4{
     max-width: 515px;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
     &__input{
         height: 38px;
         width: 100%;
@@ -136,10 +138,12 @@ h1,h2,h3,h4{
         text-align: center;
         height: 38px;
         position: absolute;
-        transform: translateX(-100%);
+        //transform: translateX(-100%);
         border-radius: 19px;
         border: 0 none;
         line-height: 35px;
+        top: 0;
+        right: 0;
         &:before{
             content: "";
             @include sprite($search);
@@ -1355,6 +1359,7 @@ body.fixed-header .slideTop {
         display: flex;
         margin-left: -2px;
         margin-right: -2px;
+        flex-wrap: wrap;
     }
     &__item{
         width: calc(33% - 16px);
@@ -1373,10 +1378,12 @@ body.fixed-header .slideTop {
 }
 .product-item{
     position: relative;
+    transition: all .3s;
     &:hover{
         .product-item__overlay{
             opacity: 0.7;
         }
+        opacity: 0.7;   
     }
     &__overlay{
         position: absolute;
@@ -1384,7 +1391,7 @@ body.fixed-header .slideTop {
         left: 0;
         right: 0;
         bottom: 0;
-        background: transparent url('/assets/template/img/octo.png') center center no-repeat;
+        //background: transparent url('/assets/template/img/octo.png') center center no-repeat;
         opacity: 0;
         transition: all .7s;
     }
@@ -1417,4 +1424,54 @@ body.fixed-header .slideTop {
         height: 18px;
         margin-top: 2px;
     }
+}
+
+.filter{
+    padding: 30px 0;
+    &__box{
+        display: flex;    
+    }
+    &__item{
+        width: 50%;
+        text-align: center;
+        padding: 20px;
+        font-size: 16px;
+        &:nth-child(even){
+            border-left: 1px solid #ededed;
+        }
+    }
+    &__name{
+        margin-bottom: 20px;
+    }
+    &__value{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 280px;
+        margin-left: auto;
+        margin-right: auto;
+        
+        label{
+            width: calc(25% - 2px);
+            cursor: pointer;
+            color: #000;
+            transition: $anim;
+            margin: 1px;
+            &:hover{
+                background-color: $orange;   
+                color: #fff;
+                transition: $anim;
+            }
+            &.active{
+                background-color: $orange;   
+                color: #fff;
+            }
+            input{
+                display: none;
+            }
+
+        }
+
+    }
+    
 }

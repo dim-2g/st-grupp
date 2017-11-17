@@ -1,4 +1,9 @@
 $(function() {
+
+    new WOW({
+        live: true
+    }).init();
+        
     popularSlider = function(){
         $('.popular__list').not('.slick-initialized').slick({
             slidesToShow: 4,
@@ -63,4 +68,12 @@ $(function() {
         setFixedHeader();
     });
 
+    $('.filter__value input').change(function(){
+        var label = $(this).parents('label');
+        if ($(this).prop('checked')){
+            label.addClass('active')
+        }else{
+            label.removeClass('active');
+        }
+    });
 });

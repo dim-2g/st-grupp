@@ -8,6 +8,7 @@
     <title>Главная</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i" rel="stylesheet">
     <link rel="stylesheet" href="/assets/template/vendor/slick/slick.css">
+    <link rel="stylesheet" href="/assets/template/vendor/animate.min.css">
     <link rel="stylesheet" href="/assets/template/css/main.css">
 </head>
 <body>
@@ -50,15 +51,15 @@
         <nav class="section-menu">
             <div class="container">
                 <ul class="section-menu__list">
-                    <li><a href="#">Штабелеры  самоходные</a></li>
+                    <li><a href="/catalog.html">Штабелеры  самоходные</a></li>
                     <li class="sep"></li>
-                    <li><a href="#">Штабелеры с выдвижной мачтой</a></li>
+                    <li><a href="/catalog.html">Штабелеры с выдвижной мачтой</a></li>
                     <li class="sep"></li>
-                    <li><a href="#">Ричтраки</a></li>
+                    <li><a href="/catalog.html">Ричтраки</a></li>
                     <li class="sep"></li>
-                    <li><a href="#">Электропогрузчики</a></li>
+                    <li><a href="/catalog.html">Электропогрузчики</a></li>
                     <li class="sep"></li>
-                    <li><a href="#">Электротележки</a></li>
+                    <li><a href="/catalog.html">Электротележки</a></li>
                 </ul>
             </div>
         </nav>
@@ -68,9 +69,9 @@
 
 <section class="zowell">
     <div class="container zowell__tech">
-            <img src="/assets/template/img/zowell/image-1.png" alt="">
-            <img src="/assets/template/img/zowell/image-2.png" alt="">
-            <img src="/assets/template/img/zowell/image-3.png" alt="">
+            <img src="/assets/template/img/zowell/image-1.png" alt="" class="animated fadeInLeft">
+            <img src="/assets/template/img/zowell/image-2.png" alt="" class="animated fadeIn">
+            <img src="/assets/template/img/zowell/image-3.png" alt="" class="animated fadeInRight">
             <div class="zowell__lead">
                 <div class="lead-block">
                     <div class="lead-box">
@@ -120,7 +121,7 @@
                 </ul>
             </div>
             <div class="reliable__sample">
-                <div class="reliable__sheet">
+                <div class="reliable__sheet wow fadeInRight" data-wow-offset="400">
                     <div class="reliable__caption">Штабелер<br /> ZOWELL XEA 1233</div>
                     <div class="reliable__label">Высота подъема вил (м):</div>
                     <div class="reliable__value">3,3</div>
@@ -128,7 +129,7 @@
                     <div class="reliable__value">1200</div>
                 </div>
 
-                <img class="reliable__image" src="/assets/template/img/zowell-1233.png" alt="">
+                <img class="reliable__image wow fadeInRight" data-wow-offset="400" data-wow-delay="1" src="/assets/template/img/zowell-1233.png" alt="" />
             </div>
         </div>
         
@@ -204,7 +205,7 @@
         <div class="two-product__header">Техника для больших складов</div>
         <div class="two-product__list">
             <div class="two-product__item">
-                <div class="two-product__card">
+                <div class="two-product__card wow fadeInLeft">
                     <div class="two-product__name">
                         <span>Штабелер</span> ZOWELL XE 1545
                     </div>
@@ -215,13 +216,13 @@
                             <div class="two-product__label">Грузоподъёмность (кг):</div>
                             <div class="two-product__value">1200</div>
                         </div>
-                        <a class="two-product__overlay" href="#"></a>
+                        <a class="two-product__overlay" href="/product-v2.html"></a>
                     </div>
                     <a href="#" class="btn-buy">Купить</a>
                 </div>
             </div>
             <div class="two-product__item">
-                <div class="two-product__card">
+                <div class="two-product__card wow fadeInRight">
                     <div class="two-product__name">
                         <span>Штабелер</span> ZOWELL XE 1535
                     </div>
@@ -232,7 +233,7 @@
                             <div class="two-product__label">Грузоподъёмность (кг):</div>
                             <div class="two-product__value">1200</div>
                         </div>
-                        <a class="two-product__overlay" href="#"></a>
+                        <a class="two-product__overlay" href="/product-v2.html"></a>
                     </div>
                     <a href="#" class="btn-buy">Купить</a>
                 </div>
@@ -247,8 +248,9 @@
 </section>
 <script>
 
-    ymaps.ready(init);
-
+    if (typeof(ymaps) != "undefined"){
+        ymaps.ready(init);
+    }
     function init () {
         var myMap = new ymaps.Map('map', {
                 //Укажите центр карты и масштаб, чтобы было видно все точки
@@ -356,6 +358,7 @@
 
 <script src="assets/template/vendor/jquery-3.2.1.min.js"></script>
 <script src="assets/template/vendor/slick/slick.js"></script>
+<script src="assets/template/vendor/wow.min.js"></script>
 <script src="assets/template/js/scripts.js"></script>
 </body>
 </html>
