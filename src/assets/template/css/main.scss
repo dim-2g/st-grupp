@@ -42,6 +42,12 @@ h1,h2,h3,h4{
         background-color: $orange;
         color: #fff;
     }
+    &--hit{
+        background-color: $orange;
+        color: #fff;   
+        padding-top: 14px;
+        padding-bottom: 10px;
+    }
 }
 .topmenu{
     background-color: #f6f6f6;
